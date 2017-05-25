@@ -1,0 +1,12 @@
+<% if object.errors.any? %>
+
+  <div class="alert alert-danger alert-custom-top">
+    <a class="close" data-dismiss="alert">&#215;</a>
+    <div class="error_notification">Please review the problems below:</div>
+    <ul>
+      <% object.errors.full_messages.each do |msg| %>
+        <%= content_tag :li, msg, :id => "error_#{msg}" if msg.is_a?(String) %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

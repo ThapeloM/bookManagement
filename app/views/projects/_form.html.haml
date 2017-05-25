@@ -1,0 +1,19 @@
+= simple_form_for(@project) do |f|
+  = render :partial =>'layouts/errors', locals: { object: @project}
+
+  .form-inputs
+    .form-group
+      = f.label :name
+      = f.text_field :name ,:autofocus => true, class: 'form-control'
+
+    .form-group
+      = f.label :description
+      = f.text_area :description, class: 'form-control'
+
+    .form-group
+      = f.label :account_id
+      %br
+      = f.collection_select :account_id, @current_account, :id, :name, prompt: "Please Choose An Account", selected: @project.account_id, class: 'custom-dropdown'
+
+    .form-actions
+      = f.button :submit, class: "btn btn-primary"

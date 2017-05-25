@@ -1,0 +1,22 @@
+<%= simple_form_for(@account) do |f| %>
+<%= render :partial =>'layouts/errors', locals: { object: @account} %>
+
+  <div class="form-group">
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name ,:autofocus => true, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email , class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= f.label :number %>
+      <%= f.text_field :number , class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>

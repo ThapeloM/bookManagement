@@ -1,0 +1,2 @@
+module HtmlPdfConverterHelper
+end
