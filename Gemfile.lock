@@ -121,7 +121,8 @@ GEM
     pdfcrowd (2.6.0)
     pg (0.20.0)
     public_suffix (2.0.5)
-    puma (3.8.2)
+    puma (4.3.1)
+      nio4r (~> 2.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -227,7 +228,7 @@ DEPENDENCIES
   mini_magick
   pdfcrowd (~> 2.6)
   pg
-  puma (~> 3.7)
+  puma (~> 4.3)
   rails (~> 5.0.0)
   rails-ujs
   record_tag_helper (~> 1.0)
